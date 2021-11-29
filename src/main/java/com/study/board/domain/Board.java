@@ -12,7 +12,8 @@ public class Board extends Timestamped{
 
     @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
-private Long id;
+
+    private Long id;
 
     @Column(nullable = false)
     private String title;
