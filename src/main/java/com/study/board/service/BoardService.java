@@ -29,4 +29,9 @@ public class BoardService {
 
         return boardRepository.findById(id).get();
     }
+
+    public void boardDelete(long id){
+
+        boardRepository.deleteById(id);
+    }
 }
