@@ -33,12 +33,12 @@ public class BoardController {
         boardService.write(board);
 
         model.addAttribute("message", "글 작성이 완료되었습니다");
-        model.addAttribute("searchUrl","/board/list");
+        model.addAttribute("searchUrl","/");
 
         return "message";
     }
 
-    @GetMapping("/board/list")
+    @GetMapping("/")
     public String boardList(Model model, @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 
         Page<Board> list = boardService.boardList(pageable);
